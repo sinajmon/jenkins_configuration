@@ -1,0 +1,22 @@
+jenkins:
+  systemMessage: "Jenkins configured automatically by Jenkins\n\n"
+  numExecutors: 2
+  scmCheckoutRetryCount: 3
+  mode: NORMAL
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: ${admin_password}
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              username: git@git.com
+              password: ${git_password}
+              scope: SYSTEM
+              description: Credentials for git
