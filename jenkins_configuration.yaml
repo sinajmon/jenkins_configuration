@@ -9,7 +9,7 @@ jenkins:
       allowsSignup: false
       users:
         - id: admin
-          password: ${admin_password}
+          password: admin@123
 
 credentials:
   system:
